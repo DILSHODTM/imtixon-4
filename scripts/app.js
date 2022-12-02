@@ -83,7 +83,8 @@ $("#login").addEventListener('submit',async(e)=>{
             alert(data.message);
             localStorage.setItem("token",data.data.token);
             localStorage.setItem("username",data.data.username);
-            fetchrender();
+            $("#overlay").classList.add("hidden");
+            $("#modal").classList.add("hidden");
         console.log(data);
     }
    else{
@@ -117,7 +118,16 @@ $("#register").addEventListener('submit',async(e)=>{
             const data=await response.json();
             if(data.code===1){
                 alert(data.message);
-                fetchData();
+                localStorage.setItem("token",data.token);
+                localStorage.setItem("username",data.data.username);
+
+                
+                $("#overlay2").classList.add("hidden");
+                $("#modal2").classList.add("hidden");
+                location.reload();
+                $("#show-btn").innerHTML=usernameLoc;
+
+                 $("#userName").innerHTML=usernameLoc;
             console.log(data);
         }
         else{
