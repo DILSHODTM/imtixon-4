@@ -1,0 +1,184 @@
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Poppins', sans-serif;
+};
+body{
+    overflow-x: hidden;
+}
+.imgg{
+    width: 500px;
+}
+.end-50{
+    bottom: 0px;
+    top: 0px;
+
+}
+.show{
+    transition: all 1s ease-in-out;
+}
+
+.fss{
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+.fsb{
+    font-size: 12px;
+}
+.fsc{
+font-size: 16px;
+}
+
+.wrapper {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     height: inherit;
+ }
+ .btn {
+     border: 0;
+     background:transparent;
+     font-family: inherit;
+     font-size: 20px;
+     color: rgb(0, 81, 255);
+     cursor: pointer;
+ }
+ 
+ .show-btn{
+ 
+     background-color: red;
+     padding: 8px 12px;
+     border-radius: 8px;
+     transition: 0.5px;
+ }
+ .show-btn:hover{
+     background-color:crimson;
+     
+ }
+ 
+ 
+ 
+ .modal {
+    display: block;
+    position: fixed;
+    top: 5%;
+    left: 10%;
+ height: 600px;
+    width: 900px;
+    background-color:rgb(255, 255, 255);
+ padding: 15px;
+ border-radius:8px;
+    z-index: 100;
+    
+ 
+ }
+  .modals {
+    display: block;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+ height: 300px;
+    width: 300px;
+    background-color:rgb(255, 255, 255);
+ padding: 15px;
+ border-radius:8px;
+    z-index: 100;
+    
+ 
+ }
+ .modal-header {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 20px;
+ }
+ 
+ 
+ .overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background: rgba(0, 0, 0, 0.6);
+ backdrop-filter: blur(4px);
+ z-index: 80;
+ }
+ .hidden{
+     display: none;
+     
+ }
+
+@media screen and  (max-width: 982px) {
+    .fss{
+        font-size: 30px;
+    }
+    .imgg{
+        width: 400px;
+    }
+    .modal {
+        display: block;
+        position: fixed ;
+        top: 5%;
+        left: 20%;
+     height: 600px;
+        width: 400px;
+        background-color:rgb(255, 255, 255);
+     padding: 15px;
+     border-radius:8px;
+        z-index: 100;
+        
+     
+     }
+ 
+}
+@media screen and  (max-width: 768px) {
+    .fss{
+        font-size: 30px;
+    }
+    .imgg{
+        width: 350px;
+    }
+ 
+}
+@media screen and  (max-width: 600px) {
+    .modal {
+        display: block;
+        position: fixed;
+        top: 5%;
+        left: 10%;
+     height: 600px;
+        width: 400px;
+        background-color:rgb(255, 255, 255);
+     padding: 15px;
+     border-radius:8px;
+        z-index: 100;
+        
+     
+     }
+ 
+ 
+}
+@media screen and  (max-width: 428px) {
+    .modal {
+        display: block;
+        position: fixed;
+        top: 5%;
+        left: 10%;
+     height: 600px;
+        width: 300px;
+        background-color:rgb(255, 255, 255);
+     padding: 15px;
+     border-radius:8px;
+        z-index: 100;
+        
+     
+     }
+ 
+ 
+}
+  
+    

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" href="./style/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <title>Document</title>
+</head>
+<body class="bg-light">
+    <header>
+      <div class="container bg-primary">  <h1>© POVERED BY DILSHODTM</h1></div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+              <img src="./images/Logo.svg" alt=""><button class="btn show-btn" id="show-btn">User</button><img src="./images/Vector.png" alt="">
+              <div class="justify-content-evenly " id="navbarNav">
+                
+                <ul class="navbar-nav gap-5 d-none d-lg-flex d-xl-flex d-xxl-flex ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./shop.html">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">For Kindergarten</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">For High School</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">For College</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                  </li>
+             
+                </ul>
+              </div>
+              <div class="d-block d-lg-none d-xl-none d-xxl-none"><i class="bi bi-menu-button-wide fs-2"></i></div>
+            </div>
+            <div class="d-none position-fixed start-0 end-50   bg-success" id="menu">
+              <ul class="navbar-nav gap-3 ms-5 d-block d-lg-none d-xl-none d-xxl-none ">
+                <button class="btn btn-danger position-absolute end-0 m-3 " id="close">X</button>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">For Kindergarten</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">For High School</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">For College</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Courses</a>
+                </li>
+           
+                
+              </ul>
+            </div>
+            
+             
+            <div class="overlay hidden" id="overlay">
+        <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <h2>LOGIN</h2>
+                       
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <img src="./images/Logo.svg" alt="">
+                        <div class="row">
+                          <div class="col-md-5 d-none d-lg-block d-xl-block d-xxl-block  ms-5">
+                            <h2>Welcome to
+                              Eduvi Online
+                              Learning Platform</h2>
+                              <img src="./images/Group.png" alt="">
+                              
+                          </div>
+                          <div class=" col-lg-6 col-md-12 col-xl-6">
+                            <button class="btn btn-lg"><i class="bi bi-google"></i>Sign in with google</button>
+                            <h6>----Or signin with your email----</h6>
+                            <form action="#" id="login">
+                              <label for="username" class="w-100 my-3">
+                                  <input type="text" class="form-control p-3" placeholder="Enter email" id="username" required>
+                              </label>
+                              <label for="password" class="w-100 my-3">
+                                  <input type="password" class="form-control p-3" placeholder="Enter password" id="password" required>
+                              </label>
+                              <button type="submit" class="btn btn-success py-3 my-3 w-100">
+                                  LOGIN
+                              </button>
+                          </form>
+                          <hr>
+                          <p class="text-center">Don't have an account? <button class="btn btn-reg">register</button></p>
+                          </div>
+                        </div>
+                   
+                    </div>
+                
+        
+            </div>    
+                </div> 
+                
+                
+                
+                <div class="overlay hidden" id="overlay3">
+                      <div class="modals" id="modal3">
+                                  <div class="modal-header">
+                                      <h2>LOGIN</h2>
+                                      <button class="btn  close-btn position-absolute end-0 m-5" style="background:red ;">X</button></p>
+                                     
+                                  </div>
+                                  <div class="modal-body" id="modal-body">
+                                      <img src="./images/Logo.svg" alt="">
+                                      <h3 id="userName"></h3>
+                                      <button class="btn btn-logout" style="background:red ;">Logout-->></button>
+                                        </div>
+                                      </div>
+                                 
+                                  </div>
+
+
+
+            <div class="overlay hidden" id="overlay2">
+              <div class="modal" id="modal2">
+                          <div class="modal-header">
+                              <h2>register</h2>
+                              
+                          </div>
+                          <div class="modal-body" id="modal-body">
+                              <img src="./images/Logo.svg" alt="">
+                              <div class="row">
+                                <div class="col-md-5 ms-5">
+                                  <h2>Welcome to
+                                    Eduvi Online
+                                    Learning Platform</h2>
+                                    <img src="./images/Group.png" alt="">
+                                    
+                                </div>
+                                <div class="col-md-5">
+                                  
+                                  <form action="#" id="register">
+                                    <label for="userReg" class="w-100 my-3">
+                                        <input type="text" class="form-control p-3" placeholder="Enter username" id="userReg" required>
+                                    </label>
+                                    <label for="emailReg" class="w-100 my-3">
+                                        <input type="email" class="form-control p-3" placeholder="Enter email" id="emailReg" required>
+                                    </label>
+                                    <label for="passwordReg" class="w-100 my-3">
+                                        <input type="password" class="form-control p-3" placeholder="Enter password" id="passwordReg" required>
+                                    </label>
+                                    <button type="submit" class="btn btn-success py-3 my-3 w-100">
+                                        LOGIN
+                                    </button>
+                                </form>
+                                <hr>
+                                <p class="text-center">Already have an account? <button class="btn btn-log">Login</button></p>
+                                </div>
+                              </div>
+                         
+                          </div>
+              
+              
+                      </div>
+              
+                  </div>
+
+
+
+
+          
+        
+        
+        
+            
+          </nav>
+    </header>
+
+
+
+    <main>
+        <section>
+            <div class="container mt-5">
+                <div class="row  m-1">
+                    <div class="col-md-6">
+                     <button class="btn text-danger" style="background:white ;">Never Stop Learning</button>
+                     <h2 class="fss fs-md-6 mt-3">Grow up your skills
+                        by online courses
+                        with Eduvi</h2>
+                        <p>Eduvi is a Global training provider based across the UK that specialises in accredited and bespoke training courses. We crush the barriers togetting a degree.</p>
+                        <form action="" class="d-block d-sm-block d-md-block d-lg-flex d-xl-flex d-xxl-flex">
+                            <select name="" class="form-select m-2" id="">
+                                <option value="" selected>Books</option>
+                                <option value="">Movies</option>
+                                
+                            </select>
+                            <input type="text" class="form-control m-2 gap-2">
+                            <button class="btn  w-100 m-2" style="background-color: #9C4DF4; color:  white;"> <i class="bi bi-search me-2"></i>Search</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6"> 
+                        <img src="./images/Image.png" alt="" class="imgg">
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container w-50">
+                <h3 class="fss text-center">High quality video, audio
+                    & live classes</h3>
+                    <p class="text-center">High-definition video is video of higher resolution and quality than standard-definition. While there is no standardized meaning for high-definition, generally any video image with considerably more than
+                        480 vertical scan lines or 576 vertical lines is considered high-definition.</p>
+                        <div class="container w-75 my-5"><button class="btn w-100 align-items-center" style="background-color: #9C4DF4; color:  white;"">Visit Courses</button></div>
+            </div>
+        </section>
+        <section>
+            <div class="container w-75 bg-white p-5 my-2 border-0 rounded-5">
+                <img src="./images/pexels-vanessa-garcia-6325959 1.png" alt="" class="mw-100 border-0 rounded-5">
+            </div>
+            <div class="container w-75 ">
+                <div class="d-flex justify-content-evenly row">
+                    
+                        <button class="btn  p-2 fsb border col-sm-4 col-md-3 mb-2" style="background:white ;"><img src="./images/icon.png" alt="" width="30px"> Audio Classes</button>
+                
+                    
+                  
+                        <button class="btn  p-2 fsb border col-sm-4 col-md-3 mb-2" style="background:white ;"> <img src="./images/icon (1).png" alt="" width="30px"> Live Classes</button>
+                
+                   
+                    
+                        <button class="btn  p-2 fsb border col-sm-5 col-md-3 mb-2" style="background:white ;"> <img src="./images/icon (2).png" alt="" width="30px"> Recorded Class</button>
+                
+                    
+                </div>
+            </div>
+
+            <div class="container w-50 mt-5 mb-2">
+              <h3 class="fss text-center">Qualified lessons for students</h3>
+                  <p class="text-center">A lesson or class is a structured period of time where learning is intended to occur. It involves one or more students being taught by a teacher or instructor.</p>
+                     
+          </div>
+
+
+            <div class="container w-75 ">
+              <div class="d-flex justify-content-evenly">
+                  
+                      <button class="btn p-2 " style="background:white ;"> Kindergarten</button>
+              
+                  
+                
+                      <button class="btn p-2  "  style="background:rgb(224, 95, 8) ;">High School</button>
+              
+                 
+                  
+                      <button class="btn p-2  " style="background:white ;">  College</button>
+              
+                  
+              </div>
+          </div>
+
+
+          <div class="container my-5">
+            <div class="d-flex justify-content-evenly row">
+              <div class=" col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+                <img src="./images/028-1.png" class=" w-25 mx-auto my-4" alt="...">
+                <div class="card-body w-75 mx-auto text-center">
+                  <h2 class="fs-5">Standard One</h2>
+                  <p class="card-text fsc">Standard 1 is a foundation Standard that reflects 7 important concepts...</p>
+                  <button class="btn border">Class Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+              <img src="./images/029-2.png" class=" w-25 mx-auto my-4" alt="...">
+              <div class="card-body w-75 mx-auto text-center">
+                <h2 class="fs-5">Standard Two</h2>
+                <p class="card-text fsc">Standard 2 builds on the foundations of Standard 1 and includes requirements...</p>
+                <button class="btn border">Class Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+            <img src="./images/030-3.png" class=" w-25 mx-auto my-4" alt="...">
+            <div class="card-body w-75 mx-auto text-center">
+              <h2 class="fs-5">Standard Three</h2>
+              <p class="card-text fsc">Standard 3 of the Aged Care Quality Standards applies to all services delivering personal...</p>
+              <button class="btn border" style="background-color: #9C4DF4; color:  white;">Class Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+          <img src="./images/031-4.png" class=" w-25 mx-auto my-4" alt="...">
+          <div class="card-body w-75 mx-auto text-center">
+            <h2 class="fs-5">Standard Four</h2>
+            <p class="card-text fsc">Standard 4 of the Aged Care Quality Standards focuses on services and supports...</p>
+            <button class="btn border">Class Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+        <img src="./images/032-5.png" class=" w-25 mx-auto my-4" alt="...">
+        <div class="card-body w-75 mx-auto text-center">
+          <h2 class="fs-5">Standard Five</h2>
+          <p class="card-text fsc">Standard 5 Learning Resources. Learning Resources ensure that the school has the...</p>
+          <button class="btn border">Class Details</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+      <img src="./images/033-6.png" class=" w-25 mx-auto my-4" alt="...">
+      <div class="card-body w-75 mx-auto text-center">
+        <h2 class="fs-5">Standard Six</h2>
+        <p class="card-text fsc">Standard 6 requires an organisation to have a system to resolve complaints...</p>
+        <button class="btn border">Class Details</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+    <img src="./images/034-7.png" class=" w-25 mx-auto my-4" alt="...">
+    <div class="card-body w-75 mx-auto text-center">
+      <h2 class="fs-5">Standard Seven</h2>
+      <p class="card-text fsc">Standard 7 Blood Management mandates that leaders of health service organisations...</p>
+      <button class="btn border">Class Details</button>
+    </div>
+  </div>
+</div>
+<div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-3 mb-3"><div class="card" style="width: 18rem;">
+  <img src="./images/035-8.png" class=" w-25 mx-auto my-4" alt="...">
+  <div class="card-body w-75 mx-auto text-center">
+    <h2 class="fs-5">Standard Eight</h2>
+    <p class="card-text fsc">Standard 8 Course from NCERT Solutions help Standards focuses  students to understand...</p>
+    <button class="btn border">Class Details</button>
+  </div>
+</div>
+</div>
+
+            </div>
+          </div>
+
+
+
+          <div class="container w-50">
+            <button class="btn  w-100" style="background-color: #9C4DF4; color:  white;">Visit More Classes</button>
+            
+          </div>
+        </section>
+
+
+
+
+        <section>
+        <div class="container my-5  border rounded-5" style="background-color: silver;">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="container  my-5  ">
+                <button class="btn  mt-5" style="background-color: rgb(189, 155, 221); color: 
+                #9C4DF4;">
+                  College Level
+                </button>
+                <h2 class="fss">Don’t waste time in
+                  COVID-19 pandemic.
+                  Develop your skills.</h2>
+                  <p>High-definition video is video of higher resolution and quality than standard-definition. While there is no standardized
+                    meaning for high-definition, generally any video.</p>
+                    <button class="btn " style="background-color: #9C4DF4; color:  white;">Registation Now</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+             <div class="container w-50 d-flex "> <img src="./images/4.png" alt="">
+              <img src="./images/6.png" alt=""></div>
+              <img src="./images/Group 7609.png" alt="" class="w-100">
+            </div>
+          </div>
+          
+        </div>
+        </section>
+        <section>
+          <div class="container w-75 my-5  " >
+            <div class="row">
+
+
+              <div class="col-md-6">
+                 <img src="./images/Image11.png" alt="" class="w-100">
+               </div>
+
+
+              <div class="col-md-6">
+                <div class="container  my-5  ">
+                  
+                  <h2 class="fss">Want to share your
+                    knowledge? Join us
+                    a Mentor</h2>
+                    <p>High-definition video is video of higher resolution and quality than standard-definition. While there is no standardized meaning for high-definition, generally any video.</p>
+                      <button class="btn " style="background-color: #9C4DF4; color:  white;">Career Information</button>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </section>
+
+
+        <section>
+          <div class="container border-0 rounded-3" style="background: #0A033C;
+          ">
+          <div class="row">
+            <div class="  col-md-3 d-none  d-lg-block d-xl-block d-xxl-block">
+              <div class="ms-5"><div class=" mt-5 "><img src="./images/Ellipse 166 (1).png" alt="" class=""></div>
+              <div class="ms-5 mt-5 ps-5 "><img src="./images/Ellipse 166 (2).png" alt="" class=""></div>
+              <div class="mt-3 ms-3"><img src="./images/Ellipse 167 (1).png" alt="" class=""></div></div>
+            </div>
+            <div class=" col-sm-12 col-md-12 col-lg-6 text-center text-white my-5"><h2 >Subscribe For Get Update
+              Every New Courses</h2>
+              <p>20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
+             <div class="container d-flex gap-2"> <input type="text" class="form-control w-75" style="background-color: transparent; color: beige;">
+              <button class="btn " style="background-color: #9C4DF4; color:  white;">search</button></div></div>
+              <div class=" col-md-3 d-none  d-lg-block d-xl-block d-xxl-block">
+                <div class="ms-5 "><div class=" mt-5 ps-5 "><img src="./images/Ellipse 167.png" alt="" class=""></div>
+                <div class="mt-5"><img src="./images/Ellipse 168 (1).png" alt="" class=""></div>
+                <div class=" mt-3 ms-5 ps-5"><img src="./images/Ellipse 168.png" alt="" class=""></div></div>
+              </div>
+          </div>
+
+          </div>
+        </section>
+        
+    </main>
+
+
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>
+            <img src="./images/Logo.svg" alt="">
+          </h6>
+          <div class="d-flex gap-3 mb-3">
+            <i class="bi bi-facebook fs-2"></i>
+            <i class="bi bi-instagram fs-2"></i>
+            <i class="bi bi-twitter fs-2"></i>
+          </div>
+          <p>
+            ©2021 Eduvi.com
+          </p>
+          <p>Eduvi is a registered
+            trademark of Eduvi.com</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+<script src="./scripts/utilits.js"></script>
+<script src="./scripts/app.js"></script>
+</html>
